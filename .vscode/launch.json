@@ -1,0 +1,34 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "dio_primeiro_app",
+            "cwd": "dio_primeiro_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "dio_primeiro_app (profile mode)",
+            "cwd": "dio_primeiro_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "dio_primeiro_app (release mode)",
+            "cwd": "dio_primeiro_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "fundamentos_dart",
+            "cwd": "fundamentos_dart",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
