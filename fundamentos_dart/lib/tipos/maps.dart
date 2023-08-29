@@ -1,5 +1,5 @@
 void main(List<String> args) {
-  Map<String, dynamic> map1 = Map<String, dynamic> ();
+  Map<String, dynamic> map1 = <String, dynamic>{};
   var map2 = {
     "Maria" : 22,
     "José" : 20,

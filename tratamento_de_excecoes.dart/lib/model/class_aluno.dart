@@ -2,7 +2,7 @@ class Aluno {
   String _nome = "";
   final List<double> _nota = [];
 
-  Aluno(String nome);
+  Aluno(this._nome);
 
   void setNome(String nome) {
     _nome = nome;
