@@ -3,15 +3,15 @@
   "packages": [
     {
       "name": "_fe_analyzer_shared",
-      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/_fe_analyzer_shared-61.0.0",
+      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/_fe_analyzer_shared-64.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.0"
     },
     {
       "name": "analyzer",
-      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/analyzer-5.13.0",
+      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/analyzer-6.2.0",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "args",
@@ -57,9 +57,9 @@
     },
     {
       "name": "file",
-      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/file-6.1.4",
+      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "frontend_server_client",
@@ -99,9 +99,9 @@
     },
     {
       "name": "lints",
-      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.0.1",
+      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.0"
     },
     {
       "name": "logging",
@@ -225,21 +225,21 @@
     },
     {
       "name": "test",
-      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/test-1.24.3",
+      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/test-1.24.6",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.0"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.6.0",
+      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.6.1",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.0"
     },
     {
       "name": "test_core",
-      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/test_core-0.5.3",
+      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/test_core-0.5.6",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.0"
     },
     {
       "name": "typed_data",
@@ -249,15 +249,15 @@
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-11.9.0",
+      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-11.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "watcher",
-      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/watcher-1.0.2",
+      "rootUri": "file:///C:/Users/welli/AppData/Local/Pub/Cache/hosted/pub.dev/watcher-1.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.0"
     },
     {
       "name": "web_socket_channel",
@@ -284,7 +284,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-08-26T17:37:28.707132Z",
+  "generated": "2023-08-30T13:45:56.063599Z",
   "generator": "pub",
-  "generatorVersion": "2.19.6"
+  "generatorVersion": "3.1.0"
 }
