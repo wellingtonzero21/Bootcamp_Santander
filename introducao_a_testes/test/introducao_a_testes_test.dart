@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:introducao_a_testes/classes/viacep.dart';
 import 'package:introducao_a_testes/introducao_a_testes.dart' as app;
 import 'package:mockito/annotations.dart';
