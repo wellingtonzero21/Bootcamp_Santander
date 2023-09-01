@@ -19,7 +19,7 @@ abstract class Pessoa {
   }
 
   String getNome() {
-    return _nome;
+    return _nome.toUpperCase();
   }
 
   void setEndereco(String endereco) {
