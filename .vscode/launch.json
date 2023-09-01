@@ -7,21 +7,21 @@
         
 
         {
-            "name": "dio_primeiro_app",
-            "cwd": "dio_primeiro_app",
+            "name": "primeiro_app",
+            "cwd": "primeiro_app",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "dio_primeiro_app (profile mode)",
-            "cwd": "dio_primeiro_app",
+            "name": "primeiro_app (profile mode)",
+            "cwd": "primeiro_app",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "dio_primeiro_app (release mode)",
-            "cwd": "dio_primeiro_app",
+            "name": "primeiro_app (release mode)",
+            "cwd": "primeiro_app",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
