@@ -6,7 +6,7 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-            color: Color.fromARGB(255, 96, 96, 96),
+            color: const Color.fromARGB(255, 96, 96, 96),
           );
   }
 }

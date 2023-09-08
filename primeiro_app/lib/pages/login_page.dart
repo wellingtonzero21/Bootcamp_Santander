@@ -17,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 23, 24, 31),
+        backgroundColor: const Color.fromARGB(255, 23, 24, 31),
         body: SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(
@@ -86,14 +86,14 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     style: const TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      contentPadding: EdgeInsets.only(top: 15),
-                      enabledBorder: UnderlineInputBorder(
+                      contentPadding: const EdgeInsets.only(top: 15),
+                      enabledBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(
                             color: Color.fromARGB(255, 121, 74, 162)),
                       ),
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintStyle: const TextStyle(color: Colors.white),
                       hintText: "SENHA",
-                      prefixIcon: Icon(Icons.lock,
+                      prefixIcon: const Icon(Icons.lock,
                           color: Color.fromARGB(255, 121, 74, 162)),
                       suffixIcon: InkWell(
                         onTap: () {
@@ -105,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                             isObscureText
                                 ? Icons.visibility_off
                                 : Icons.visibility,
-                            color: Color.fromARGB(255, 121, 74, 162)),
+                            color: const Color.fromARGB(255, 121, 74, 162)),
                       ),
                     ),
                   ),
@@ -121,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10))),
                             backgroundColor: MaterialStateProperty.all(
-                                Color.fromARGB(255, 121, 74, 162))),
+                                const Color.fromARGB(255, 121, 74, 162))),
                         onPressed: () {
                           if (email.trim() == "" && senha.trim() == "") {
                             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomePage()));

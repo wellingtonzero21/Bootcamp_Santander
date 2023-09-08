@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
         textTheme: GoogleFonts.aksharTextTheme(),
-        appBarTheme: AppBarTheme(color: Color.fromARGB(255, 121, 74, 162)) ,
+        appBarTheme: const AppBarTheme(color: Color.fromARGB(255, 121, 74, 162)) ,
         ),
       home: const LoginPage(),
     );

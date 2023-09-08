@@ -8,8 +8,9 @@ void main(List<String> args) {
   print("Bem vindo a calculadora de IMC");
   var nome = utils.lerConsole("Digite seu nome: ");
     try {
-      if (nome.trim() == "")
+      if (nome.trim() == "") {
         throw NomeInvalido();
+      }
     } 
     on NomeInvalido {
       print(NomeInvalido());
