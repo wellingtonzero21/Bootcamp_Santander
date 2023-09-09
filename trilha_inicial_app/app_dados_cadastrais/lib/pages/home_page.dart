@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                 child: const SizedBox(
                   width: double.infinity,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 15,),
                     child: Text(
                       "Dados cadastráis",
                       style: TextStyle(fontSize: 20),
