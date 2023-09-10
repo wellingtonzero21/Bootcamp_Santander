@@ -33,7 +33,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
               child: TextButton(onPressed: () {
                 print("Clicado");
               },
-              child: Text("Salvar")),
+              child: Text("Salvart")),
             ),
           ],
         ),
