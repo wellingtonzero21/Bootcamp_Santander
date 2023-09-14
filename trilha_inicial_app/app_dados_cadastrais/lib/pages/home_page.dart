@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:primeiro_app/pages/dados_cadastrais.dart';
-import 'package:primeiro_app/pages/page1.dart';
+import 'package:primeiro_app/pages/card_page.dart';
 import 'package:primeiro_app/shared/widget/custon_drawer.dart';
 
 import 'page2.dart';
@@ -34,7 +33,7 @@ class _HomePageState extends State<HomePage> {
                 });
               },
               children: const [
-                Page1(),
+                CArdPage(),
                 Page2(),
                 Page3(),
               ],
