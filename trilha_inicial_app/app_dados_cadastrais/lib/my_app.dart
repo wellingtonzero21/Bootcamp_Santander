@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.deepPurple,
         textTheme: GoogleFonts.aksharTextTheme(),
-        appBarTheme: const AppBarTheme(color: Color.fromARGB(255, 121, 74, 162)) ,
+        appBarTheme: const AppBarTheme(color: Color.fromARGB(255, 121, 74, 162)),
         ),
       home: const LoginPage(),
     );
