@@ -19,7 +19,7 @@ class CardDetailPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         IconButton(onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage(),));
                         }, icon: Icon(Icons.close)),
                     Row(
                         children: [

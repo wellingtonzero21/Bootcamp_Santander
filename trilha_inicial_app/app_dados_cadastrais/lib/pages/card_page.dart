@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/model/card_detail.dart';
 import 'package:primeiro_app/pages/card_detail.dart';
+import 'package:primeiro_app/repositories/card_detail_repository.dart';
 
 class CArdPage extends StatefulWidget {
   const CArdPage({super.key});
@@ -10,8 +11,19 @@ class CArdPage extends StatefulWidget {
 }
 
 class _CArdPageState extends State<CArdPage> {
-  var cardDetail = CardDetail(1, "Lorem Ipsum", "assets/image/logo_dio.png",
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+  CardDetail? cardDetail;
+  var cardDetailRepository = CardDetailRepository();
+
+  @override
+  void initState() {
+    super.initState();
+    carregarDados();
+  }
+
+  carregarDados() async {
+    cardDetail = await cardDetailRepository.get();
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +32,8 @@ class _CArdPageState extends State<CArdPage> {
         Container(
           margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
           width: double.infinity,
-          child: Hero(
-            tag: cardDetail.id,
+          child: cardDetail == null ? LinearProgressIndicator() : Hero(
+            tag: cardDetail!.id,
             child: Card(
               shape:
                   RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
@@ -35,13 +47,13 @@ class _CArdPageState extends State<CArdPage> {
                     child: Row(
                       children: [
                         Image.asset(
-                          cardDetail.assets,
+                          cardDetail!.assets,
                           height: 20,
                         ),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 10),
                           child: Text(
-                            cardDetail.title,
+                            cardDetail!.title,
                             style: TextStyle(
                                 fontSize: 25, fontWeight: FontWeight.w700),
                           ),
@@ -52,7 +64,7 @@ class _CArdPageState extends State<CArdPage> {
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                     child: Text(
-                      cardDetail.text,
+                      cardDetail!.text,
                       style: TextStyle(
                         fontSize: 18,
                       ),
@@ -68,7 +80,7 @@ class _CArdPageState extends State<CArdPage> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => CardDetailPage(
-                                    cardDetail: cardDetail,
+                                    cardDetail: cardDetail!,
                                   ),
                                 ));
                           },
