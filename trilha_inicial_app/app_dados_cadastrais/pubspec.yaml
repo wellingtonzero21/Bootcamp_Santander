@@ -59,7 +59,9 @@ flutter:
     - assets/image/paisagem1.jpg
     - assets/image/paisagem2.jpg
     - assets/image/paisagem3.jpg
-    - assets/image/logo.png
+    - assets/image/user1.png
+    - assets/image/user2.png
+    - assets/image/user3.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
