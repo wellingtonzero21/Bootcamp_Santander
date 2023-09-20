@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/pages/card_page.dart';
+import 'package:primeiro_app/pages/list_view_h.dart';
 import 'package:primeiro_app/shared/widget/custon_drawer.dart';
 
-import 'page2.dart';
-import 'page3.dart';
+import 'image_assets.dart';
+import 'list_view_v.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -34,18 +35,21 @@ class _HomePageState extends State<HomePage> {
               },
               children: const [
                 CArdPage(),
-                Page2(),
-                Page3(),
+                ImageAssetsPage(),
+                ListViewVPage(),
+                ListViewHPage(),
               ],
             ),
           ),
           BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
               onTap: (value) {
                 controller.jumpToPage(value);
               },
               currentIndex: posicaoPagina,
               items: const [
                 BottomNavigationBarItem(label: "Add", icon: Icon(Icons.add)),
+                BottomNavigationBarItem(label: "outros", icon: Icon(Icons.account_box)),
                 BottomNavigationBarItem(label: "Home", icon: Icon(Icons.home)),
                 BottomNavigationBarItem(
                     label: "Person", icon: Icon(Icons.person)),
