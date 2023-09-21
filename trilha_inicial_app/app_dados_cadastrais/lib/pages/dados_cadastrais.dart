@@ -130,7 +130,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "Linguagem Preferidas:",
+                      "Linguagens preferidas:",
                       style: TextStyle(fontSize: 19),
                     ),
                     Column(
