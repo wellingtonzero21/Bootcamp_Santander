@@ -13,6 +13,7 @@ class _TarefaPageState extends State<TarefaPage> {
   var tarefaRepository = TarefaRepository();
   var descricaoController = TextEditingController();
   var _tarefas = <Tarefa>[];
+  var naoConcluidos = false;
 
   @override
   void initState() {
@@ -21,7 +22,13 @@ class _TarefaPageState extends State<TarefaPage> {
   }
 
   void obterTarefas() async {
-    _tarefas = await tarefaRepository.listar();
+    if (naoConcluidos) {
+      _tarefas = await tarefaRepository.listarNaoConcluido();
+      setState(() {});
+    } else {
+      _tarefas = await tarefaRepository.listar();
+      setState(() {});
+    }
   }
 
   @override
@@ -30,7 +37,7 @@ class _TarefaPageState extends State<TarefaPage> {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
-          descricaoController.text = "";
+          //descricaoController.text = "";
           showDialog(
               context: context,
               builder: (BuildContext bc) {
@@ -58,12 +65,56 @@ class _TarefaPageState extends State<TarefaPage> {
               });
         },
       ),
-      body: ListView.builder(
-        itemCount: _tarefas.length,
-        itemBuilder: (context, index) {
-          var tarefa = _tarefas[index];
-          return Text(tarefa.getDescricao());
-        },
+      body: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Column(
+          children: [
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 13, vertical: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Apenas não concluidos",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Switch(
+                      value: naoConcluidos,
+                      onChanged: (bool value) {
+                        naoConcluidos = value;
+                        obterTarefas();
+                      })
+                ],
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: _tarefas.length,
+                itemBuilder: (context, index) {
+                  var tarefa = _tarefas[index];
+                  return Dismissible(
+                    onDismissed: (DismissDirection dismissDirection) async {
+                      await tarefaRepository.remove(tarefa.id);
+                      obterTarefas();
+                    },
+                    key: Key(tarefa.id),
+                    child: ListTile(
+                      title: Text(tarefa.descricao),
+                      trailing: Switch(
+                          value: tarefa.concluido,
+                          onChanged: (bool value) async {
+                            await tarefaRepository.alterar(
+                                tarefa.id, value);
+                            obterTarefas();
+                            setState(() {});
+                          }),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
