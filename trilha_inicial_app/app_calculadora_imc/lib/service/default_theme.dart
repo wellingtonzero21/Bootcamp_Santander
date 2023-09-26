@@ -17,7 +17,7 @@ class _DefaultThemeState extends State<DefaultTheme> {
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.aksharTextTheme(),
         appBarTheme: const AppBarTheme(
-          color: Color.fromARGB(255, 46, 0, 115),
+          color: Color.fromARGB(255, 32, 0, 80),
         )
       ),
       home: const HomePage(),
