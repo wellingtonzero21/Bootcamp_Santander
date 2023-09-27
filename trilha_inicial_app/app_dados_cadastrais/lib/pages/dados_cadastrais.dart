@@ -57,7 +57,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 20, top: 30, right: 20),
-        child: salvando ? Center(child: CircularProgressIndicator()) : ListView(
+        child: salvando ? const Center(child: CircularProgressIndicator()) : ListView(
           children: [
             const Text(
               "Nome:",

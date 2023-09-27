@@ -8,6 +8,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  double altura = 1.50;
+  double peso = 60.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,19 +21,51 @@ class _HomePageState extends State<HomePage> {
         children: [
           Container(
             margin: const EdgeInsets.only(
-              left: 14,
+              left: 15,
               top: 20,
             ),
             height: 200,
             width: 170,
-            child: const Card(
-              color: Color.fromARGB(177, 43, 0, 74),
-              child: Padding(
-                padding: EdgeInsets.only(left: 55, top: 50),
-                child: Text(
-                  "Peso",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),
-                ),
+            child: Card(
+              color: const Color.fromARGB(177, 43, 0, 74),
+              child: Column(
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(
+                      left: 1,
+                      top: 30,
+                    ),
+                    child: Text(
+                      "Peso",
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: 1,
+                    ),
+                    child: Text(
+                      "${peso.toStringAsFixed(0)}kg",
+                      style:
+                          TextStyle(fontSize: 50, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Container(
+                    height: 30,
+                    child: Slider(
+                      max: 250,
+                      min: 30,
+                      value: peso,
+                      onChanged: (double value) {
+                        setState(() {
+                          peso = value;
+                          print(peso);
+                        });
+                      },
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -46,46 +81,39 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(left: 1, top: 30,),
+                    padding: EdgeInsets.only(
+                      left: 1,
+                      top: 30,
+                    ),
                     child: Text(
                       "Altura",
                       style:
                           TextStyle(fontSize: 30, fontWeight: FontWeight.w400),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 1,),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: 1,
+                    ),
                     child: Text(
-                      "60",
+                      "${altura.toStringAsFixed(2)}",
                       style:
                           TextStyle(fontSize: 50, fontWeight: FontWeight.w600),
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TextButton(
-                        onPressed: () {
-                          print("clicado");
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                            left: 25,
-                            right: 15,
-                          ),
-                          child: const Icon(Icons.remove),
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          print("clicado");
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 25, left: 15),
-                          child: const Icon(Icons.add),
-                        ),
-                      ),
-                    ],
+                  Container(
+                    height: 30,
+                    child: Slider(
+                      max: 2.50,
+                      min: 1.40,
+                      value: altura,
+                      onChanged: (double value) {
+                        setState(() {
+                          altura = value;
+                          print(altura);
+                        });
+                      },
+                    ),
                   ),
                 ],
               ),
