@@ -14,11 +14,12 @@ class _DefaultThemeState extends State<DefaultTheme> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.indigo,
         textTheme: GoogleFonts.aksharTextTheme(),
         appBarTheme: const AppBarTheme(
-          color: Color.fromARGB(255, 32, 0, 80),
-        )
+          color: Color.fromARGB(177, 43, 0, 74),
+        ),
+        scaffoldBackgroundColor: Color.fromARGB(163, 17, 0, 43),
       ),
       home: const HomePage(),
     );
