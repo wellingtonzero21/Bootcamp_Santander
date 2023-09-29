@@ -5,7 +5,7 @@ class Resultado extends StatelessWidget {
   const Resultado({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) 
     return SafeArea(
       child: Scaffold(
         body: Container(
