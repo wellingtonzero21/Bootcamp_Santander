@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/model/calculadora_imc.dart';
-import 'package:primeiro_app/pages/card_resultado.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,6 +9,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String situacaoIMC = "";
+  double resultadoIMC = 0.0;
   double altura = 1.70;
   double peso = 60.0;
 
@@ -118,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(
                         height: 30,
                         child: Slider(
-                          max: 2.50,
+                          max: 2.10,
                           min: 1.40,
                           value: altura,
                           onChanged: (double value) {
@@ -146,9 +147,11 @@ class _HomePageState extends State<HomePage> {
               child: TextButton(
                 onPressed: () {
                   double resultado = calcularIMC(peso, altura);
+                  String situacao = textoSituacao(resultado);
                   setState(() {
-                    print(resultado);
-                    //Navigator.push(context, MaterialPageRoute(builder: (context) => Resultado(),));
+                    print(resultadoIMC);
+                    resultadoIMC = resultado;
+                    situacaoIMC = situacao;
                   });
                 },
                 child: const Text(
@@ -172,16 +175,32 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(10),
                     color: const Color.fromARGB(177, 43, 0, 74),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.only(top: 20),
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text("Resultado:", style: TextStyle(fontSize: 30, color: Colors.white)),
-                        Padding(
-                          padding: EdgeInsets.symmetric(vertical: 100),
-                          child: Text(""),
-                        )
-                            
+                        const Text(
+                          "Resultado:",
+                          style: TextStyle(fontSize: 30, color: Colors.white),
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          situacaoIMC,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            color: Color.fromARGB(255, 0, 215, 125),
+                          ),
+                        ),
+                        const SizedBox(height: 50),
+                        Text(
+                          resultadoIMC.toStringAsFixed(
+                              2), // Exibe o resultado com duas casas decimais
+                          style: const TextStyle(
+                              fontSize: 50,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ],
                     ),
                   ),
