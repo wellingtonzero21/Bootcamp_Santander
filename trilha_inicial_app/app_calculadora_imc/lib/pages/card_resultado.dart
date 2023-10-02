@@ -60,4 +60,4 @@ class Resultado extends StatelessWidget {
       ),
     );
   }
-
+}

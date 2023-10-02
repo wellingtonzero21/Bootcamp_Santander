@@ -17,7 +17,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))),
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(10),
+                bottomRight: Radius.circular(10))),
         title: const Center(child: Text("Calculadora de IMC")),
       ),
       body: Column(
@@ -32,7 +35,8 @@ class _HomePageState extends State<HomePage> {
                 height: 200,
                 width: 170,
                 child: Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
                   color: const Color.fromARGB(177, 43, 0, 74),
                   child: Column(
                     children: [
@@ -81,7 +85,8 @@ class _HomePageState extends State<HomePage> {
                 height: 200,
                 width: 170,
                 child: Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
                   color: const Color.fromARGB(177, 43, 0, 74),
                   child: Column(
                     children: [
@@ -140,13 +145,10 @@ class _HomePageState extends State<HomePage> {
               ),
               child: TextButton(
                 onPressed: () {
-                    double resultado = calcularIMC(peso, altura);
-                    double resultadoIMC() {
-                      return resultado;
-                    }
+                  double resultado = calcularIMC(peso, altura);
                   setState(() {
-                    print(resultadoIMC);
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Resultado(),));
+                    print(resultado);
+                    //Navigator.push(context, MaterialPageRoute(builder: (context) => Resultado(),));
                   });
                 },
                 child: const Text(
@@ -157,6 +159,34 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.w600),
                 ),
               ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 25, left: 15, right: 15),
+            child: Column(
+              children: [
+                Container(
+                  height: 320,
+                  width: 360,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(177, 43, 0, 74),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 20),
+                    child: Column(
+                      children: [
+                        Text("Resultado:", style: TextStyle(fontSize: 30, color: Colors.white)),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 100),
+                          child: Text(""),
+                        )
+                            
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
