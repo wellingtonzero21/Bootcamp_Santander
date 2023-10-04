@@ -49,13 +49,13 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
   carregarDados() async {
     storage = await SharedPreferences.getInstance();
     nomeController.text =
-        await storage.getString(CHAVE_DADOS_CADASTRAIS_NOME) ?? "";
+        storage.getString(CHAVE_DADOS_CADASTRAIS_NOME) ?? "";
     dataNascimentoController.text =
-        await storage.getString(CHAVE_DADOS_CADASTRAIS_DATA_NASCIMENTO) ?? "";
+        storage.getString(CHAVE_DADOS_CADASTRAIS_DATA_NASCIMENTO) ?? "";
         dataNascimento = DateTime.parse(dataNascimentoController.text);    nivelSelecionado =
         storage.getString(CHAVE_DADOS_CADASTRAIS_NIVEL_EXPERIENCIA) ?? "";
     linguagensSelecionadas =
-        storage.getStringList(CHAVE_DADOS_CADASTRAIS_LINGUAGENS) ?? [];
+        storage.getStringList(CHAVE_DADOS_CADASTRAIS_NIVEL_EXPERIENCIA) ?? [];
     tempoDeExperiencia =
         storage.getInt(CHAVE_DADOS_CADASTRAIS_TEMPO_EXPERIENCIA) ?? 0;
     salarioEscolhido = storage.getDouble(CHAVE_DADOS_CADASTRAIS_SALARIO) ?? 0;
