@@ -20,6 +20,6 @@ textoSituacao(double resultado) {
     return "Obesidade Grau II (severa)";
   } else if (resultado >= 40) {
     return "Obesidade Grau III (mórbida)";
-  }
+  
 
 }
