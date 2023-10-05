@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:primeiro_app/pages/configuracoes_page.dart';
+import 'package:primeiro_app/pages/configuracoes/configuracoes_hive_page.dart';
 import 'package:primeiro_app/pages/dados_cadastrais.dart';
 import 'package:primeiro_app/pages/login_page.dart';
-import 'package:primeiro_app/pages/numeros_aleatorios.dart';
+import 'package:primeiro_app/pages/numeros_aleatorios/numeros_aleatorios_hive.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -162,7 +162,7 @@ class CustomDrawer extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const NumerosAleatoriosPage(),
+                      builder: (context) => const NumerosAleatoriosHivePage(),
                     ));
               },
             ),
@@ -192,7 +192,7 @@ class CustomDrawer extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const ConfiguracoesPage(),
+                      builder: (context) => const ConfiguracoesHivePage(),
                     ));
               },
             ),
