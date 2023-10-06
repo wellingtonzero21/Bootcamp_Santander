@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/pages/configuracoes/configuracoes_hive_page.dart';
-import 'package:primeiro_app/pages/dados_cadastrais.dart';
+import 'package:primeiro_app/pages/dados_cadastrais/dados_cadastrais_hive.dart';
 import 'package:primeiro_app/pages/login_page.dart';
 import 'package:primeiro_app/pages/numeros_aleatorios/numeros_aleatorios_hive.dart';
 
