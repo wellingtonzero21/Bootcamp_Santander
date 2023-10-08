@@ -35,4 +35,4 @@ class TarefaSQLiteRepository {
     var db = await SQLiteDataBase().obterDataBase();
     await db.rawInsert('DELETE FROM tarefas WHERE id = ?', [id]);
   }
-}
+
