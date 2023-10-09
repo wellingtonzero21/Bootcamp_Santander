@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:primeiro_app/pages/card_page.dart';
 import 'package:primeiro_app/pages/list_view_h.dart';
 import 'package:primeiro_app/pages/tarefa_page/tarefa_sqlite_page.dart';
+import 'package:primeiro_app/pages/consulta_cep.dart';
 import 'package:primeiro_app/shared/widget/custon_drawer.dart';
 
 import 'image_assets.dart';
@@ -35,6 +36,7 @@ class _HomePageState extends State<HomePage> {
                 });
               },
               children: const [
+                ConsultaCEP(),
                 CArdPage(),
                 ImageAssetsPage(),
                 ListViewVPage(),
@@ -50,6 +52,7 @@ class _HomePageState extends State<HomePage> {
               },
               currentIndex: posicaoPagina,
               items: const [
+                BottomNavigationBarItem(label: "HTTP", icon: Icon(Icons.get_app_rounded)),
                 BottomNavigationBarItem(label: "Add", icon: Icon(Icons.add)),
                 BottomNavigationBarItem(label: "outros", icon: Icon(Icons.account_box)),
                 BottomNavigationBarItem(label: "Home", icon: Icon(Icons.home)),
