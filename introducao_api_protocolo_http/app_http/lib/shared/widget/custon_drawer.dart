@@ -3,6 +3,7 @@ import 'package:primeiro_app/pages/configuracoes/configuracoes_hive_page.dart';
 import 'package:primeiro_app/pages/dados_cadastrais/dados_cadastrais_hive.dart';
 import 'package:primeiro_app/pages/login_page.dart';
 import 'package:primeiro_app/pages/numeros_aleatorios/numeros_aleatorios_hive.dart';
+import 'package:primeiro_app/pages/posts_page.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -193,6 +194,36 @@ class CustomDrawer extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const ConfiguracoesHivePage(),
+                    ));
+              },
+            ),
+            Divider(),
+            InkWell(
+              child: const SizedBox(
+                width: double.infinity,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.post_add,
+                        size: 20,
+                      ),
+                      SizedBox(width: 5),
+                      Text(
+                        "Posts",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PostsPage(),
                     ));
               },
             ),
