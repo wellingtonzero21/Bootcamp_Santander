@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/model/comment_model.dart';
-import 'package:primeiro_app/repositories/comments_repository.dart';
+import 'package:primeiro_app/repositories/comments_http_repository.dart';
 
 class CommentsPage extends StatefulWidget {
   final int postId;
@@ -11,7 +11,7 @@ class CommentsPage extends StatefulWidget {
 }
 
 class _CommentsPageState extends State<CommentsPage> {
-  var commentsRepository = CommentsRepository();
+  var commentsRepository = CommentsHttpRepository();
   var comments = <CommentModel>[];
 
   @override
@@ -35,7 +35,7 @@ class _CommentsPageState extends State<CommentsPage> {
       ),
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        child: comments.length == 0 ? Center(child: CircularProgressIndicator()) : ListView.builder(
+        child: comments.length == 0 ? const Center(child: CircularProgressIndicator()) : ListView.builder(
           itemCount: comments.length,
           itemBuilder: (context, int index) {
             var comment = comments[index];
