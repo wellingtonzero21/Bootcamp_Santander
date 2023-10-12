@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/model/post_model.dart';
+import 'package:primeiro_app/pages/comments_page.dart';
 import 'package:primeiro_app/repositories/posts_repository.dart';
 
 class PostsPage extends StatefulWidget {
@@ -35,25 +36,38 @@ class _PostsPageState extends State<PostsPage> {
           itemCount: posts.length,
           itemBuilder: (context, index) {
             var post = posts[index];
-            return Container(
-              margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              child: Card(
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                  post.title.toUpperCase(),
-                  style: const TextStyle(fontSize: 19, fontWeight: FontWeight.w500),
+            return InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                    builder: (context) => CommentsPage(postId: post.id)));
+              },
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                child: Card(
+                  child: Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            post.title.toUpperCase(),
+                            style: const TextStyle(
+                                fontSize: 19, fontWeight: FontWeight.w500),
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            post.body,
+                            style: const TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.w200),
+                          ),
+                        ],
+                      )),
                 ),
-                        const SizedBox(height: 5,),
-                        Text(
-                  post.body,
-                  style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w200),
-                ),
-                      ],
-                    )),
               ),
             );
           },
