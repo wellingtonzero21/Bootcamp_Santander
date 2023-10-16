@@ -13,3 +13,4 @@ void main() async {
   Hive.registerAdapter(DadosCadastraisModelAdapter());
   Hive.registerAdapter(TarefaHiveModelAdapter());
   runApp(const MyApp());
+}
