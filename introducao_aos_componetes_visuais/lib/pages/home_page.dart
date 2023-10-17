@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:primeiro_app/service/gerador_numero_aleatorio.dart';
+import 'package:primeiro_app/pages/drawer_page.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,37 +19,15 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text("Home Page"),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-              child: Text(
-                "Ações do Usuário",
-                style: GoogleFonts.akshar(fontSize: 20),
-              )),
-          Center(
-              child: Text(
-                "Numero Aleatório: $numeroGerado",
-                style: GoogleFonts.akshar(fontSize: 20),
-              )),
-          Center(
-              child: Text(
-                "Quantidade de Cliques: $quantidadeCliques",
-                style: GoogleFonts.akshar(fontSize: 20),
-              )),
-        ],
+      drawer: const DrawerPage(),
+      body: Container(
+        width: double.infinity,
+        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+        ),
       ),
-      floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.add),
-          onPressed: () {
-            setState(() {
-              quantidadeCliques = quantidadeCliques +1;
-              print(quantidadeCliques);
-              numeroGerado =
-                  GeradorNumeroAleatorioService.gerarNumeroAleatorio(11);
-              print(numeroGerado);
-            });
-          }),
     );
   }
 }
