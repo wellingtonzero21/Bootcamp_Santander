@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:primeiro_app/pages/home_page.dart';
+import 'package:primeiro_app/pages/splash_screen/splash_screen_page.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         textTheme: GoogleFonts.aksharTextTheme(),
         ),
-      home: const HomePage(),
+      home: const SplashScreenPage(),
     );
   }
 }
