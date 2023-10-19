@@ -1,6 +1,7 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:primeiro_app/pages/brasil_fields_page/brasil_fields_page.dart';
 import 'package:primeiro_app/pages/drawer_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,6 +20,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     tabController = TabController(initialIndex: 0, length: 5, vsync: this);
     super.initState();
   }
+
   var numeroGerado = 0;
   var quantidadeCliques = 0;
 
@@ -26,7 +28,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home Page"),
+        title: Text(
+          "APP_TITLE".tr(),
+          ),
       ),
       drawer: const DrawerPage(),
       body: TabBarView(
@@ -44,19 +48,18 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           Container(
             color: Colors.blueGrey,
           ),
-          Container(
-            color: Colors.orange,
-          ),
+          BrasilFieldsPage()
         ],
       ),
-      bottomNavigationBar: ConvexAppBar.badge({0: '99+', 2: Colors.redAccent},
+      bottomNavigationBar: ConvexAppBar.badge(
+        {0: '99+', 2: Colors.redAccent},
         backgroundColor: Colors.black,
         items: [
           TabItem(icon: Icons.home, title: 'Home'),
           TabItem(icon: Icons.map, title: 'Discovery'),
           TabItem(icon: Icons.add, title: 'Add'),
           TabItem(icon: Icons.message, title: 'Message'),
-          TabItem(icon: Icons.people, title: 'Profile'),
+          TabItem(icon: Icons.flag, title: 'Brasil'),
         ],
         onTap: (int i) => tabController.index = i,
         controller: tabController,

@@ -1,7 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:primeiro_app/pages/auto_size_text/auto_size_text_page.dart';
 import 'package:primeiro_app/pages/parcent_indicator/percent_indicator_page.dart';
+
+
 
 class DrawerPage extends StatefulWidget {
   const DrawerPage({super.key});
@@ -128,6 +131,59 @@ class _DrawerPageState extends State<DrawerPage> {
               ),
               Text(
                 "Indicador de Porcentagem",
+                style: TextStyle(fontSize: 20),
+              ),
+            ],
+          ),
+        ),
+      ),
+      const Divider(),
+      InkWell(
+        onTap: () {
+          
+        },
+        child: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+          child: Row(
+            children: [
+              FaIcon(
+                FontAwesomeIcons.flag,
+                size: 20,
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Text(
+                "Intl",
+                style: TextStyle(fontSize: 20),
+              ),
+            ],
+          ),
+        ),
+      ),
+      const Divider(),
+      InkWell(
+        onTap: () {
+          if (context.locale.toString() == "pt_BR") {
+            context.setLocale(Locale('en','US'));
+          } else {
+            context.setLocale(Locale('pt','BR'));
+          }
+          
+        },
+        child: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+          child: Row(
+            children: [
+              FaIcon(
+                FontAwesomeIcons.language,
+                size: 20,
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Text(
+                "pt_BR",
                 style: TextStyle(fontSize: 20),
               ),
             ],
