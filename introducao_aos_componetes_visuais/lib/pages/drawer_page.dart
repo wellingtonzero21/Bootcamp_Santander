@@ -191,6 +191,30 @@ class _DrawerPageState extends State<DrawerPage> {
         ),
       ),
       const Divider(),
+      InkWell(
+        onTap: () {
+          
+        },
+        child: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+          child: Row(
+            children: [
+              FaIcon(
+                FontAwesomeIcons.batteryHalf,
+                size: 20,
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Text(
+                "Indicador da bateria",
+                style: TextStyle(fontSize: 20),
+              ),
+            ],
+          ),
+        ),
+      ),
+      const Divider(),
     ])));
   }
 }
