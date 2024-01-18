@@ -3,17 +3,21 @@ void main(List<String> args) {
   Carro gol = Carro('gol');
 
   print(mercedes.modelo);
-  print(mercedes._fabricacao);
   print(mercedes.valorDoCarro);
   print(gol.modelo);
-  print(gol._fabricacao);
+  print(gol.valorDoCarro);
+
+  Pagamento pagamento = PagarComPix();
+  pagamento.pagar();
+
+  Pagamento pagamento2 = PagamentoComBoleto();
+  pagamento2.pagar();
 }
 
 class Carro {
   final String modelo;
-  Carro(this.modelo);
-  int _valor = 10000;
   int _fabricacao = 5000;
+  int _valor = 10000;
 
   int get valorFabracacao => _fabricacao;
 
@@ -21,11 +25,44 @@ class Carro {
     _fabricacao = valor;
     }
 
-
-
   int get valorDoCarro => _valor;
 
-  void set value(int valor) {
+  set value(int valor) {
     _valor = valor;
+  }
+  Carro(this.modelo);
+
+}
+
+abstract class Pessoa {
+  String comunicar();
+}
+
+class PessoaET extends Pessoa {
+  String comunicar() {
+    return "Olá, mundo";
+  }
+}
+
+class PessoaNaoET extends Pessoa {
+  String comunicar() {
+    return "Bom Dia";
+  }
+}
+
+abstract class Pagamento {
+  void pagar();
+}
+
+class PagarComPix implements Pagamento {
+  void pagar() {
+    return print("Pago com Pix");
+  }
+}
+
+class PagamentoComBoleto implements Pagamento {
+  @override
+  void pagar() {
+    return print("Pago com Boleto");
   }
 }
