@@ -22,14 +22,13 @@ void main(List<String> args) {
   print(resultJson["permissoes"][0]);
 
   Map mapa = {
-    'nome' : 'David',
-    'password' : '123456',
-    'permissoes' : ["owner","admin"],
-
+    'nome': 'David',
+    'password': '123456',
+    'permissoes': ["owner", "admin"],
   };
   print("-------------------------");
   print(mapa);
 
   var result = jsonEncode(mapa);
-  print(result); 
+  print(result);
 }

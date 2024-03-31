@@ -22,7 +22,11 @@ class _HomePageState extends State<HomePage> {
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(10),
                 bottomRight: Radius.circular(10))),
-        title: const Center(child: Text("Calculadora de IMC")),
+        title: const Center(
+            child: Text(
+          "Calculadora de IMC",
+          style: TextStyle(fontSize: 20),
+        )),
       ),
       body: Column(
         children: [

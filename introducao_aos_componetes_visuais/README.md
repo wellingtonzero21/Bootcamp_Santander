@@ -1,16 +1,27 @@
-# primeiro_app
 
-A new Flutter project.
+# 🏗️ Primeiro App de Estruturação de Componentes
 
-## Getting Started
+## Sobre o projeto
+Este projeto tem como objetivo **entender a estruturação do código**, explorando componentes, widgets, animações, introdução a dependências e indicadores.
 
-This project is a starting point for a Flutter application.
+## Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+## Dependências utilizadas nesse projeto:
+- Easy Localization.
+- Intl.
+- Brasil Fields.
+- Convex Bottom Bar.
+- Animated Text Kit.
+- Dio.
+- Http.
+- Hive.
+- Path Provider.
+- Shared Preferences.
+- Google Fonts.
+- SqfLite.
+- Flutter.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Desenvolvedor:
+Wellington Andrade
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wellington-andrade-64b44b275)

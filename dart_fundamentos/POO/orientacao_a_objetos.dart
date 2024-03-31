@@ -23,15 +23,15 @@ class Carro {
 
   set valorNovo(int valor) {
     _fabricacao = valor;
-    }
+  }
 
   int get valorDoCarro => _valor;
 
   set value(int valor) {
     _valor = valor;
   }
-  Carro(this.modelo);
 
+  Carro(this.modelo);
 }
 
 abstract class Pessoa {

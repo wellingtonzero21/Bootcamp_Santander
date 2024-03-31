@@ -13,7 +13,7 @@ void main() {
   }
   //TODO: Ordenar os ativos em ordem alfabética.
   ativos.sort((a, b) => a.compareTo(b));
-  
+
   //TODO: Imprimir a lista de ativos ordenada, conforme a tabela de exemplos.
   for (var ativo in ativos) {
     print(ativo);

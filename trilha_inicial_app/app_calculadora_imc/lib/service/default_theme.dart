@@ -14,9 +14,9 @@ class _DefaultThemeState extends State<DefaultTheme> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
         textTheme: GoogleFonts.aksharTextTheme(),
         appBarTheme: const AppBarTheme(
+          titleTextStyle: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
           color: Color.fromARGB(177, 43, 0, 74),
         ),
         scaffoldBackgroundColor: Color.fromARGB(163, 17, 0, 43),

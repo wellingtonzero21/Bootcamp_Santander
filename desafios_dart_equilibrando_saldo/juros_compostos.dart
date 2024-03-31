@@ -5,9 +5,9 @@ void main() {
   var taxaJuros = double.parse(stdin.readLineSync()!);
   var periodo = int.parse(stdin.readLineSync()!);
 
-  var valorFinal = valorInicial ;
+  var valorFinal = valorInicial;
 
-   //TODO: Iterar, baseado no período em anos, para calculo do valorFinal com os juros.
+  //TODO: Iterar, baseado no período em anos, para calculo do valorFinal com os juros.
   for (var anos = 1; anos <= periodo; anos++) {
     valorFinal += valorFinal * (taxaJuros);
   }
