@@ -1,8 +1,8 @@
 
-# 🏗️ Primeiro App de Estruturação de Componentes
+# 🏗️ App Protótipo - Estruturação de Componentes
 
 ## Sobre o projeto
-Este projeto tem como objetivo **entender a estruturação do código**, explorando componentes, widgets, animações, introdução a dependências e indicadores.
+Este aplicativo é um protótipo, uma jornada pelo universo do desenvolvimento de software, onde mergulhamos na **organização e estruturação de código** de maneira prática e intuitiva. Através deste projeto, abordamos o uso de **componentes**, **widgets** e **animações**, além de introduzir o conceito de **dependências** e como elas podem potencializar nossas aplicações. O objetivo é fornecer uma base sólida para a construção de interfaces dinâmicas e responsivas, garantindo uma experiência de usuário fluida e agradável.
 
 ## Screenshots
 ![Captura de tela 2024-03-29 154107](https://github.com/wellingtonzero21/Bootcamp_Santander/assets/137003398/2dea1fc0-1892-44a0-a5ad-5db455a78206)

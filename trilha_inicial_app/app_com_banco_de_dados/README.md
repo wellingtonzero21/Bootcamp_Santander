@@ -1,16 +1,23 @@
-# primeiro_app
 
-A new Flutter project.
+# 🏗️ Primeiro App Com de Banco de Dados
 
-## Getting Started
+## ℹ️ Sobre o projeto
+Este projeto foi concebido como uma jornada educativa para explorar o universo dos bancos de dados e o gerenciamento de dependências no desenvolvimento de aplicativos com Flutter. O foco principal foi criar um aplicativo que servisse como um campo de testes para a implementação e manipulação de diferentes formas de armazenamento de dados e o uso de pacotes externos.
 
-This project is a starting point for a Flutter application.
+Este aplicativo não é um produto final, mas um registro detalhado do processo de aprendizado, demonstrando a aplicação prática de conceitos teóricos em um projeto real. Ele serve como um exemplo de utilização e do ecossistema de pacotes disponíveis.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Dependências utilizadas nesse projeto:
+- Hive.
+- Path Provider.
+- Shared Preferences.
+- Google Fonts.
+- SqfLite.
+- Flutter.
+
+## Desenvolvedor:
+Wellington Andrade
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wellington-andrade-64b44b275)
