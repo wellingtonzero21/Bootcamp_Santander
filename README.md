@@ -9,9 +9,6 @@ Durante o bootcamp, foram abordados diversos tópicos, incluindo:
 - **Gerenciamento de estado e navegação entre telas**: Exploração de diferentes estratégias de gerenciamento de estado e como implementar uma navegação eficaz entre diferentes telas.
 - **Integração com APIs e bancos de dados**: Ensino de como conectar aplicativos Flutter a APIs de back-end e realizar operações de banco de dados para criar aplicativos dinâmicos e interativos.
 
-## Screenshots
-
-
 ## O que são esse arquivos?
 Os arquivos incluídos neste repositório representam o conteúdo abordado durante o bootcamp. Cada módulo é acompanhado por um arquivo "ReadMe" que detalha os tópicos estudados e as habilidades desenvolvidas.
 
