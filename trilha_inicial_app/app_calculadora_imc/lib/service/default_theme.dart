@@ -13,6 +13,7 @@ class _DefaultThemeState extends State<DefaultTheme> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: GoogleFonts.aksharTextTheme(),
         appBarTheme: const AppBarTheme(

@@ -1,6 +1,6 @@
-import 'package:fundamentos_dart/exception/nome_invalido_exception.dart';
-import 'package:fundamentos_dart/model/class_aluno.dart';
-import 'package:fundamentos_dart/model/console_utils.dart';
+import 'class_aluno.dart';
+import 'console_utils.dart';
+import '../../desafio_calculadora_imc/name_invalid_exception.dart';
 
 void execute() {
   print("Bem vindo ao Sistema de notas!");

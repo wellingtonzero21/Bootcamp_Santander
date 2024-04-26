@@ -188,15 +188,15 @@ class _HomePageState extends State<HomePage> {
                           "Resultado:",
                           style: TextStyle(fontSize: 30, color: Colors.white),
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 55),
                         Text(
                           situacaoIMC,
                           style: const TextStyle(
-                            fontSize: 20,
-                            color: Color.fromARGB(255, 0, 215, 125),
+                            fontSize: 25,
+                            color: Color.fromARGB(255, 0, 225, 255),
                           ),
                         ),
-                        const SizedBox(height: 50),
+                        const SizedBox(),
                         Text(
                           resultadoIMC.toStringAsFixed(
                               2), // Exibe o resultado com duas casas decimais

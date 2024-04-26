@@ -1,5 +1,5 @@
-import 'excessoes/tratamento_exceções.dart';
 import 'pessoa.dart';
+import 'tratamento_exceções.dart';
 import 'utils.dart' as utils;
 
 import 'calcular_imc.dart';

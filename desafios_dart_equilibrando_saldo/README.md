@@ -1,3 +1,3 @@
 ## Desafios de Lógica e Programação
 
-**Desafios** proposto durante as aulas de lógicas informando parametros através do Imput no terminal.
+Durante as aulas, foram apresentados desafios que envolviam a lógica de programação. Esses desafios eram resolvidos informando parâmetros através da entrada no terminal.
