@@ -123,12 +123,17 @@ class _LoginPageState extends State<LoginPage> {
                             backgroundColor: MaterialStateProperty.all(
                                 const Color.fromARGB(255, 121, 74, 162))),
                         onPressed: () {
-                          if (email.trim() == "" && senha.trim() == "") {
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomePage()));
+                          if (email.trim() == "teste@gmail.com" &&
+                              senha.trim() == "123456") {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const HomePage()));
                           } else {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text("Login inválido"),)
-                            );
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text("Login inválido"),
+                            ));
                           }
                         },
                         child: const Text(

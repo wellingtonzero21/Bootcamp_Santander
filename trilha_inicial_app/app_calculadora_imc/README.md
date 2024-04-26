@@ -1,16 +1,18 @@
-# primeiro_app
 
-A new Flutter project.
+# 🍎 Calculadora de IMC
 
-## Getting Started
+## ℹ️ Sobre o projeto
+Este projeto foi desenvolvido com o objetivo de **criar uma Calculadora de Massa Corporal (IMC)**, que permite aos usuários calcular e interpretar seu índice de massa corporal de forma simples e intuitiva. Através de uma Interface intuitiva e amigável, facilitando a interação do usuário. Os usuários podem inserir seus dados, como peso e altura, e fornece uma avaliação do estado de saúde com base nesses dados.
 
-This project is a starting point for a Flutter application.
+## Screenshots e video
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Dependências utilizadas nesse projeto:
+- Google Fonts.
+- Cupertino Icons.
+- Flutter.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Desenvolvedor:
+Wellington Andrade
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wellington-andrade-64b44b275)

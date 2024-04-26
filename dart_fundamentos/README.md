@@ -1,8 +1,8 @@
 # Fundamentos de Dart.
 
-Este repositório contém materiais relacionados aos fundamentos da linguagem Dart. Ele foi criado para familiarização antes de começar os projetos em Flutter.
+Este repositório contém materiais relacionado ao fundamento da linguagem Dart. Ele foi criado para familiarização antes de começar os projetos em Flutter.
 
-### Foi aborado nesse módulo:
+### Foi abordado nesse módulo:
 - **Tipos:** Exploração dos tipos de dados disponíveis em Dart.
 - **Funções:** Discussão sobre como criar e usar funções.
 - **Loops:** Introdução aos loops (como for e while) em Dart
